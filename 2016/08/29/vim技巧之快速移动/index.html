@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="test,go,c++," />
+  <meta name="keywords" content="vim," />
 
 
 
@@ -84,19 +84,16 @@
 
 
 
-<meta name="description" content="test
-fuxnghua">
+<meta name="description" content="简介   使用vim的场景中，很大一部分是在不同段落中跳转，掌握快速移动技巧会让很多操作事半功倍！！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://fuxinghua.github.io/2016/08/29/test/index.html">
+<meta property="og:title" content="vim技巧之快速移动">
+<meta property="og:url" content="http://fuxinghua.github.io/2016/08/29/vim技巧之快速移动/index.html">
 <meta property="og:site_name" content="scae">
-<meta property="og:description" content="test
-fuxnghua">
-<meta property="og:updated_time" content="2016-08-29T16:10:19.487Z">
+<meta property="og:description" content="简介   使用vim的场景中，很大一部分是在不同段落中跳转，掌握快速移动技巧会让很多操作事半功倍！！">
+<meta property="og:updated_time" content="2016-08-29T16:10:15.303Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="test">
-<meta name="twitter:description" content="test
-fuxnghua">
+<meta name="twitter:title" content="vim技巧之快速移动">
+<meta name="twitter:description" content="简介   使用vim的场景中，很大一部分是在不同段落中跳转，掌握快速移动技巧会让很多操作事半功倍！！">
 
 
 
@@ -117,9 +114,9 @@ fuxnghua">
 
 
 
-  <link rel="canonical" href="http://fuxinghua.github.io/2016/08/29/test/"/>
+  <link rel="canonical" href="http://fuxinghua.github.io/2016/08/29/vim技巧之快速移动/"/>
 
-  <title> test | scae </title>
+  <title> vim技巧之快速移动 | scae </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -249,7 +246,7 @@ fuxnghua">
             
             
               
-                test
+                vim技巧之快速移动
               
             
           </h1>
@@ -266,6 +263,25 @@ fuxnghua">
             </time>
           </span>
 
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/tips/" itemprop="url" rel="index">
+                    <span itemprop="name">tips</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
           
 
           
@@ -289,8 +305,74 @@ fuxnghua">
       
 
       
-        <h3 id="test"><a href="#test" class="headerlink" title="test"></a>test</h3><ul>
-<li>fuxnghua</li>
+        <h4 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h4><p>   使用vim的场景中，很大一部分是在不同段落中跳转，掌握快速移动技巧会让很多操作事半功倍！！<br><a id="more"></a></p>
+<h4 id="按屏幕移动"><a href="#按屏幕移动" class="headerlink" title="按屏幕移动"></a>按屏幕移动</h4><h5 id="常用"><a href="#常用" class="headerlink" title="常用"></a>常用</h5><ol>
+<li>crtl+f 向前（往行号大的方向移动）移动一屏，想来F代表Forward</li>
+<li>ctrl+b 向后移动一屏</li>
+<li>ctrl+d 向前移动半屏</li>
+<li>ctrl+u 向后移动半屏</li>
+<li>ctrl+e 整体上移动一行</li>
+<li>ctrl+y 下移动一行</li>
+</ol>
+<h6 id="重新定位屏幕"><a href="#重新定位屏幕" class="headerlink" title="重新定位屏幕"></a>重新定位屏幕</h6><ol>
+<li>z + 回车         // 把当前行移动到屏幕顶部</li>
+<li>扩展下上命令如：</li>
+<li>100z + 回车      // 将移动第100行到屏幕的顶部，记得键入100z之后要再回车</li>
+<li>z.                              // 把当前行移动到屏幕中央，不用回车，切记</li>
+<li>z-                             // 把当前行移动到屏幕底部，同上，不用回车</li>
+</ol>
+<h4 id="搜索移动"><a href="#搜索移动" class="headerlink" title="搜索移动"></a>搜索移动</h4><p>事实上，对于一个源程序文件我们往往是要查找其中的一个变量或函数名，最有效的方法就是按文本搜索快速移动。</p>
+<ul>
+<li>/pattern            // 向前搜索模式，pattern代指要搜索的内容</li>
+<li>?pattern            // 向后搜索模式</li>
+<li>n                              // 重复上次搜索（向行号大的方向）</li>
+<li>N                             // 反方向重复上次搜索</li>
+</ul>
+<h4 id="按行号移动"><a href="#按行号移动" class="headerlink" title="按行号移动"></a>按行号移动</h4><ul>
+<li>nG                         // 移动到第n行，注意此处G是大写。即输入n，在小写模式下输入shift+g，大写模式下直接按下g键,（如100G则能快速定位到源程序中第100行代码位置处，想必是很有用的。）</li>
+<li>Ctrl + g            // 显示当前行（并不是移动命令）</li>
+<li>G                           // 移动到文件的尾部，在小写模式下输入shift+g，大写模式下直接按下g键</li>
+</ul>
+<h4 id="按光标移动"><a href="#按光标移动" class="headerlink" title="按光标移动"></a>按光标移动</h4><ul>
+<li>左：h</li>
+<li>下：j</li>
+<li>上：k</li>
+<li><p>右：l</p>
+</li>
+<li><p>下一行行首：+         //shift键切换到上档 ‘+’</p>
+</li>
+<li>上一行行首：-</li>
+<li><p>当前行行首：0</p>
+</li>
+<li><p>把光标移至当前行的起始位置，也即当前行的第一个非空白字符：^<br>当前行行尾：$</p>
+</li>
+<li><p>后一个单词词首：w,W    // w：将光标右移一个字。光标停留在下一个字的字首位置；W：将光标右移一个字。光标停留在下一个字的字首位置（即使两个字之间存在标点符号）。</p>
+</li>
+<li><p>后一个单词词尾：e,E      // e：把光标移至当前所在字（或下一个字）的最后一个字符位置；E:  同e，只是以空格字符作为字的分隔符。</p>
+</li>
+<li><p>前一个单词词首：b,B //b:将光标左移一个字。光标停留在下一个字的字首位置；B：将光标左移一个字。光标停留在下一个字的字首位置（即使两个字之间存在标点符号）。</p>
+</li>
+<li><p>当前屏幕首行：H</p>
+</li>
+<li>当前屏幕末行：L</li>
+<li>当前屏幕中央：M</li>
+<li>fx       //往右移动到 x 字符上                                 </li>
+<li>Fx       //往左移动到 x 字符上                                   </li>
+<li>tx       //往右移动到 x 字符前                                                        </li>
+<li>Tx      //往左移动到 x 字符后<br>（注意：以上四个命令中，其中x是键入的字符）                                  </li>
+<li>;  //分号，配合 f 和 t 使用，重复一次                                       </li>
+<li>, //逗号，配合 f 和 t 使用，反方向重复一次  </li>
+</ul>
+<p><strong><em>标记文本替换</em></strong></p>
+<ul>
+<li><p>mqq    //用字符串qq来标记当前光标的位置</p>
+</li>
+<li><p>`qq      //移至qq所标记处  (数字1键左边键的上档)</p>
+</li>
+<li><p>‘qq      //移至qq标记所在行的开头处（单引号）</p>
+</li>
+<li><p>‘’         //移至当前行上第一次所在位置的行的开头处（在光标移动之后，两个单引号）</p>
+</li>
 </ul>
 
       
@@ -314,7 +396,7 @@ fuxnghua">
       
         <div class="post-tags">
           
-            <a href="/tags/test-go-c/" rel="tag">#test,go,c++</a>
+            <a href="/tags/vim/" rel="tag">#vim</a>
           
         </div>
       
@@ -323,16 +405,12 @@ fuxnghua">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/08/29/vim技巧之快速移动/" rel="next" title="vim技巧之快速移动">
-                <i class="fa fa-chevron-left"></i> vim技巧之快速移动
-              </a>
-            
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/08/29/autowired报空指针/" rel="prev" title="autowired报空指针解决办法">
-                autowired报空指针解决办法 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/08/29/test/" rel="prev" title="test">
+                test <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -447,7 +525,7 @@ fuxnghua">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#test"><span class="nav-number">1.</span> <span class="nav-text">test</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按屏幕移动"><span class="nav-number">2.</span> <span class="nav-text">按屏幕移动</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#常用"><span class="nav-number">2.1.</span> <span class="nav-text">常用</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#重新定位屏幕"><span class="nav-number">2.1.1.</span> <span class="nav-text">重新定位屏幕</span></a></li></ol></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#搜索移动"><span class="nav-number">3.</span> <span class="nav-text">搜索移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按行号移动"><span class="nav-number">4.</span> <span class="nav-text">按行号移动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#按光标移动"><span class="nav-number">5.</span> <span class="nav-text">按光标移动</span></a></li></ol></div>
             
           </div>
         </section>
