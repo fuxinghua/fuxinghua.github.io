@@ -238,8 +238,8 @@
             
               
                 
-                <a class="post-title-link" href="/2016/08/29/2016年7月学习list/" itemprop="url">
-                  未命名
+                <a class="post-title-link" href="/2016/08/29/markdown语法/" itemprop="url">
+                  markdown语法
                 </a>
               
             
@@ -252,7 +252,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-29T19:27:12+08:00" content="2016-08-29">
+            <time itemprop="dateCreated" datetime="2016-08-29T19:40:02+08:00" content="2016-08-29">
               2016-08-29
             </time>
           </span>
@@ -282,8 +282,188 @@
       
         
           
-            <p><strong>2016年7月（持续更新）</strong></p>
-<h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3><ul>
+            <p>在文字写书写不同数量的#可以完成不同的标题，如下：</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>等号及减号也可以进行标题的书写，不过只能书写二级标题，并且需要写在文字的下面，减号及等号的数量不会影响标题的基数，如下：</p>
+<h1 id="二级标题-1"><a href="#二级标题-1" class="headerlink" title="二级标题"></a>二级标题</h1><h2 id="二级标题-2"><a href="#二级标题-2" class="headerlink" title="二级标题"></a>二级标题</h2><p>无序列表的使用，在符号“-”后加空格使用。如下：</p>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2</li>
+<li>无序列表3</li>
+</ul>
+<p>如果要控制列表的层级，则需要在符号“-”前使用空格。如下：</p>
+<ul>
+<li>无序列表1</li>
+<li>无序列表2<ul>
+<li>无序列表2.1<ul>
+<li>列表内容</li>
+<li>列表内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>有序列表的使用，在数字及符号“.”后加空格几个，如下：</p>
+<ol>
+<li>有序列表1</li>
+<li>有序列表2</li>
+<li>有序列表3<br>有序列表如果要区分层级，也可以在数字前加空格。</li>
+</ol>
+<p>引用的格式是使用符号“&gt;”后面书写文字，及可以使用引用。如下：</p>
+<blockquote>
+<p>这个是引用<br>是不是和电子邮件中的<br>引用格式很像</p>
+</blockquote>
+<p>粗体的使用是在需要加粗的文字前后各加两个“<em>”，而斜体的使用则是在需要斜体的文字前后各加一个“</em>”，如果要使用粗体和斜体，那么就是在需要操作的文字前后各加三个“*”。如下：</p>
+<p><strong>这个是粗体</strong><br><em>这个是斜体</em><br><strong><em>这个是粗体加斜体</em></strong></p>
+<p>在文中直接加链接，中括号中是需要添加链接的文字，圆括号中是需要添加的链接，如下：</p>
+<p><a href="http://example.com/" title="optional title" target="_blank" rel="external">link text</a></p>
+<p>在引用中加链接，第一个中括号添加需要添加的文字，第二个中括号中是引用链接的id，之后在引用中，使用id加链接：如下：</p>
+<p><a href="http://example.com/" title="optional title here" target="_blank" rel="external">link text</a></p>
+<p>在文中直接引用链接，直接使用尖括号，把链接加入到尖括号中就可以实现，如下：</p>
+<p><a href="http://example.com/" target="_blank" rel="external">http://example.com/</a> or <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#x6f;&#58;&#97;&#100;&#100;&#114;&#x65;&#115;&#115;&#x40;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#x63;&#111;&#x6d;">&#97;&#100;&#100;&#114;&#x65;&#115;&#115;&#x40;&#x65;&#x78;&#97;&#x6d;&#x70;&#108;&#x65;&#46;&#x63;&#111;&#x6d;</a><br>插入互联网上图片，格式如下：</p>
+<p><img src="http://img3.douban.com/mpic/s1108264.jpg" alt="这里写图片描述"><br><img src="http://img3.douban.com/mpic/s1108264.jpg" alt="这里写图片描述"></p>
+<p>用TAB键起始的段落，会被认为是代码块，如下：</p>
+<pre><code>&lt;php&gt;
+    echo “hello world&quot;;
+&lt;/php&gt;
+</code></pre><p>如果在一个行内需要引用代码，只要用反引号`引起来就好，如下：</p>
+<p>Use the <code>printf()</code> function.</p>
+<p>可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，同时需要在分隔线的上面空一行。如下：</p>
+<hr>
+<hr>
+<hr>
+<p>删除线的使用，在需要删除的文字前后各使用两个符合“~”，如下</p>
+<p><del>Mistaken text.</del></p>
+<p>在需要高亮的代码块的前一行及后一行使用三个反引号“`”，同时第一行反引号后面表面代码块所使用的语言，如下：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">require</span> <span class="string">'redcarpet'</span></div><div class="line">markdown = Redcarpet.new(<span class="string">"Hello World!"</span>)</div><div class="line">puts markdown.to_html</div></pre></td></tr></table></figure>
+<p>可以使用冒号来定义表格的对齐方式，如下：</p>
+<table>
+<thead>
+<tr>
+<th>Tables</th>
+<th style="text-align:center">Are</th>
+<th style="text-align:right">Cool</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>col 3 is</td>
+<td style="text-align:center">right-aligned</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td>col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td>zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<p>可以渲染序列图：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">张三-&gt;李四: 嘿，小四儿, 写博客了没?</div><div class="line">Note right of 李四: 李四愣了一下，说：</div><div class="line">李四--&gt;张三: 忙得吐血，哪有时间写。</div></pre></td></tr></table></figure>
+<p>或者流程图：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">st=&gt;start: 开始</div><div class="line">e=&gt;end: 结束</div><div class="line">op=&gt;operation: 我的操作</div><div class="line">cond=&gt;condition: 确认？</div><div class="line"></div><div class="line">st-&gt;op-&gt;cond</div><div class="line">cond(yes)-&gt;e</div><div class="line">cond(no)-&gt;op</div></pre></td></tr></table></figure>
+<ul>
+<li>关于 <strong>序列图</strong> 语法，参考 [这儿]</li>
+<li>关于 <strong>流程图</strong> 语法，参考 [这儿]</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/08/29/2016年7月学习list/" itemprop="url">
+                  2016年7月学习list
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-29T19:39:36+08:00" content="2016-08-29">
+              2016-08-29
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="java"><a href="#java" class="headerlink" title="java"></a>java</h3><ul>
 <li><a href="http://www.ibm.com/developerworks/cn/java/j-lo-ibatis-principle/" target="_blank" rel="external">ibatis介绍</a></li>
 <li><a href="http://www.cnblogs.com/xdp-gacl/p/4261895.html" target="_blank" rel="external">mybatis介绍</a></li>
 <li><a href="http://blog.csdn.net/huaweitman/article/details/42078901" target="_blank" rel="external">encache</a></li>
@@ -483,7 +663,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
