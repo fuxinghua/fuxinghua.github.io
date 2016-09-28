@@ -84,16 +84,40 @@
 
 
 
-<meta name="description" content="stay hungury,stay foolish">
+<meta name="description" content="angularjs简介angularjs按照官方的说法，是对html的扩展，那么问题就来了
+
+如何知道是一个angularjs程序？ ng-app 指令，可以在html的标签中指定 ng-app = “scae” ， 该指令有作用域，和所加的区域一致
+如何进行逻辑&amp;amp;数据控制？ng-controller 指令，是一个标准的javascript对象，需要进行初始化
+
+来个具体例子
+
+
+1234">
 <meta property="og:type" content="article">
 <meta property="og:title" content="angularjs学习笔记">
 <meta property="og:url" content="http://fuxinghua.github.io/2016/09/27/angularjs学习笔记/index.html">
 <meta property="og:site_name" content="scae">
-<meta property="og:description" content="stay hungury,stay foolish">
-<meta property="og:updated_time" content="2016-09-27T06:33:24.151Z">
+<meta property="og:description" content="angularjs简介angularjs按照官方的说法，是对html的扩展，那么问题就来了
+
+如何知道是一个angularjs程序？ ng-app 指令，可以在html的标签中指定 ng-app = “scae” ， 该指令有作用域，和所加的区域一致
+如何进行逻辑&amp;amp;数据控制？ng-controller 指令，是一个标准的javascript对象，需要进行初始化
+
+来个具体例子
+
+
+1234">
+<meta property="og:updated_time" content="2016-09-28T06:59:30.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="angularjs学习笔记">
-<meta name="twitter:description" content="stay hungury,stay foolish">
+<meta name="twitter:description" content="angularjs简介angularjs按照官方的说法，是对html的扩展，那么问题就来了
+
+如何知道是一个angularjs程序？ ng-app 指令，可以在html的标签中指定 ng-app = “scae” ， 该指令有作用域，和所加的区域一致
+如何进行逻辑&amp;amp;数据控制？ng-controller 指令，是一个标准的javascript对象，需要进行初始化
+
+来个具体例子
+
+
+1234">
 
 
 
@@ -305,7 +329,60 @@
       
 
       
-        
+        <h4 id="angularjs简介"><a href="#angularjs简介" class="headerlink" title="angularjs简介"></a>angularjs简介</h4><p>angularjs按照官方的说法，是对html的扩展，那么问题就来了</p>
+<ol>
+<li>如何知道是一个angularjs程序？<br> ng-app 指令，可以在html的标签中指定 ng-app = “scae” ， 该指令有作用域，和所加的区域一致</li>
+<li><p>如何进行逻辑&amp;数据控制？<br>ng-controller 指令，是一个标准的javascript对象，需要进行初始化</p>
+</li>
+<li><p>来个具体例子</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">&lt;!DOCTYPE html&gt;</div><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</div><div class="line">&lt;script src=&quot;http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line"></div><div class="line">&lt;div ng-app=&quot;myApp&quot; ng-controller=&quot;personCtrl&quot;&gt;  // 声明angularjs app，&amp; 初始化</div><div class="line"></div><div class="line">名: &lt;input type=&quot;text&quot; ng-model=&quot;firstName&quot;&gt;&lt;br&gt;</div><div class="line">姓: &lt;input type=&quot;text&quot; ng-model=&quot;lastName&quot;&gt;&lt;br&gt;</div><div class="line">&lt;br&gt;</div><div class="line">姓名: &#123;&#123;fullName()&#125;&#125;</div><div class="line"></div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line">&lt;script&gt;</div><div class="line">var app = angular.module(&apos;myApp&apos;, []);</div><div class="line">app.controller(&apos;personCtrl&apos;, function($scope) &#123;</div><div class="line">    $scope.firstName = &quot;John&quot;;</div><div class="line">    $scope.lastName = &quot;Doe&quot;;</div><div class="line">    $scope.fullName = function() &#123;</div><div class="line">        return $scope.firstName + &quot; &quot; + $scope.lastName;</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div><div class="line"></div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<h4 id="angularjs各种指令"><a href="#angularjs各种指令" class="headerlink" title="angularjs各种指令"></a>angularjs各种指令</h4><p>各种原生指令，温故知新</p>
+<ol>
+<li>ng-app 指令初始化一个 AngularJS 应用程序。</li>
+<li>ng-init 指令初始化应用程序数据。</li>
+<li>ng-model 指令把元素值（比如输入域的值）绑定到应用程序</li>
+<li>ng-model 指令用于绑定应用程序数据到 HTML 控制器(input, select, textarea)的值。</li>
+<li>Scope(作用域) 是应用在 HTML (视图) 和 JavaScript (控制器)之间的纽带。是一个对象，有可用的方法和属性，可应用在视图和控制器上。</li>
+<li>ng-controller  AngularJS 控制器 控制 AngularJS 应用程序的数据。<br>AngularJS 控制器是常规的 JavaScript 对象。</li>
+<li>过滤器，过滤器可以使用一个管道字符（|）添加到表达式和指令中。</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>指令</th>
+<th style="text-align:center">用途</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td style="text-align:center">格式化数字为货币格式</td>
+</tr>
+<tr>
+<td>filter</td>
+<td style="text-align:center">从数组项中选择一个子集</td>
+</tr>
+<tr>
+<td>lowercase</td>
+<td style="text-align:center">格式化字符串为小写</td>
+</tr>
+<tr>
+<td>orderBy</td>
+<td style="text-align:center">根据某个表达式排列数组</td>
+</tr>
+<tr>
+<td>uppercase</td>
+<td style="text-align:center">格式化字符串为大写</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>service 服务，创建自定义服务，可以写出很多通用的脚本</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;script&gt;</div><div class="line">var app = angular.module(&apos;myApp&apos;, []);</div><div class="line"></div><div class="line">app.service(&apos;hexafy&apos;, function() &#123;</div><div class="line">	this.myFunc = function (x) &#123;</div><div class="line">        return x.toString(16);</div><div class="line">    &#125;</div><div class="line">&#125;);</div><div class="line">app.controller(&apos;myCtrl&apos;, function($scope, hexafy) &#123;</div><div class="line">  $scope.hex = hexafy.myFunc(255);</div><div class="line">&#125;);</div><div class="line">&lt;/script&gt;</div></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -456,7 +533,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#angularjs简介"><span class="nav-number">1.</span> <span class="nav-text">angularjs简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#angularjs各种指令"><span class="nav-number">2.</span> <span class="nav-text">angularjs各种指令</span></a></li></ol></div>
             
           </div>
         </section>
